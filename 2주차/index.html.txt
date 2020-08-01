@@ -436,5 +436,24 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
+
+    <!--script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        //버튼을 클릭하면 전체 메뉴를 보이게 하세요.
+        $(".tit .btn").click(function(e){
+            e.preventDefault(); //#의 기능을 꺠줌. #은 클릭했을 때 위로 올라는 성질이 있음.
+            //$("#cont_nav").css("display","block");
+            //$("cont_nav").show();
+            //$("#cont_nav").fadeIn();
+            //$("#cont_nav").selectNode();
+            //위의 방법들은 버튼을 눌렀을 때 나타나는 것만 가능. 사라지는 것 못함. 
+            //$("#cont_nav").toggle();
+            //$("#cont_nav").fadeToggle(); 서서히 나타남
+            $("#cont_nav").slideToggle(200); //()의 숫자를 바꿔 속도를 바꿀 수 있음.
+            $(this).toggleClass("on"); //btn에 on이 붙었을 때. $(".tit .btn").toggleClass("on"); 이렇게 써도 됨.
+        });
+    </script>
+    
 </body>
 </html>
